@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1>다양한 입력양식의 속성</h1>
+<form method="post" action="#">
+ 이메일:<input type="email" required><br>
+ <!-- required 속성은 유효한 이메일인지 검사
+ 입력양식 종류
+ 1.autocomplete : 자동으로 입력을 완성
+ 2.autofocus : 페이지가 로드되면 자동으로 입력포커스를 가진다.
+ 3.placeholder : 입력 힌트를 희미하게 보여줌
+ 4.readonly : 단지 읽기 속성
+ 5.pattern : 허용하는 입력형태를 정규표현식으로 지정
+  -->
+  검색 : <input type="search" required ><br>
+ URL : <input type="url" required ><br>
+ 전화번호 : <input type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+  title="###-####-####"><br>
+  <!-- pattern속성에 지정한 정규표현식 [0-9]{4}의 뜻은 0부터 9까지의 정수를 4번 반복,
+  	   입력 검증을 하기 위해서는 title에 올바른 입력형태를 지정해야 함. -->
+  
+  신발사이즈 : <input type="number" min="200" max="300" step="10" value="260" ><br>
+  <!-- 현재 선택값은 260 -->
+  테니스 스킬 : <input type="range" min="1" max="10" value="1" ><br>
+  날짜 : <input type="date">
+  <hr>
+  
+  <input type="submit" value="제출" >
+  <input type="reset" value="취소" > <!-- reset은 입력박스 초기화 -->
+  
+ 
+</form>
+</body>
+</html>

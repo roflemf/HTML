@@ -1,0 +1,24 @@
+@charset "EUC-KR";
+
+body{
+	background-color:yellow; /*본문 배경색을 노랑으로 설정*/
+	font-family: serif; /*글꼴 지정*/
+	color:black; /* 글자색을 검정*/
+	
+}
+
+h1{
+	color:red;
+	border-bottom: 1px solid grey; /*밑줄 선 두께를 1픽셀, 실선 solid, 선색을 gray*/
+	
+}
+
+p.first{
+	color:green; font-size:36px; /*글자 크기 지정*/
+	font-wieght: bolder; /* 더 진하게 */
+
+}
+
+p.second{
+	color:blue;
+}

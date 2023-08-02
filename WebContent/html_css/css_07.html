@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+ body em{ /*body 태그 안에 포함된 em요소에 css 적용 */
+    border: 2px dotted blue; /* 테두리 선두꼐를 2픽셀,dotted 점선, 테두리 선색을 파랑으로 설정 */
+ 
+ }
+ body > h1{/* body태그안의 직계 자손인 h1요소의 css적용*/
+  background-color:grey; /*배경색을 그레이색*/
+ }
+ 
+</style>
+</head>
+<body>
+ <h1>This headline is <em>very</em> important</h1>
+ <!-- em태그도 내용물 크기만큼만 차지하는 인라인 요소 태그이다. -->
+</body>
+</html>

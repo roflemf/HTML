@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{
+ margin:0px; /*상하좌우 바깥여백을 0픽셀로 설정 */
+ padding:0px; /*상하좌우 안 여백을 0픽셀로 설정 */
+}
+p{
+ margin:0px; padding:0px;
+ background-color:yellow; border:2px solid red;
+}
+/* 문제)
+	target아이디 선택자를 활용해 상하좌우 바깥여백을 0픽셀, 상하좌우 안여백을 20픽셀,
+	배경색을 밝은 그린, 테두리 선두께를 3픽셀, 실선, 테두리 선색을 오렌즈로 설정
+*/
+#target{
+ margin:0px; padding:20px;
+ background-color:lightgreen; border: 3px solid orange;
+
+}
+</style>
+</head>
+<body>
+ <p>margin:0px; padding:0px; 인 단락입니다. </p>
+ <p id="target">margin:10px; padding:20px; 인 단락입니다.</p>
+</body>
+</html>
