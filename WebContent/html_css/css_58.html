@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px; 
+            height: 150px; 
+            border:1px solid black;
+            background: 
+            linear-gradient(
+        rgba(31, 59, 235, 0),
+        rgba(70, 128, 227, 0.5));
+            transition: width 3s, background-color 3s; /*5초간 너비가 서서히 변경됌 (css3에서 추가됌)*/
+        }
+        div:hover{
+            width:400px;
+            background-color: rgb(116, 78, 239);
+            
+            /*마우스 오버하면 너비가 5초간 200픽셀만큼 서서히 커짐 */
+        }
+    </style>
+</head>
+<body>
+    <div>마우스 올려보기</div>
+</body>
+</html>

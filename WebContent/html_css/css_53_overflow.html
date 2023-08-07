@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        p{
+            width:200px; height: 50px; background: lightgreen;
+
+        }
+        #target{
+            width:300px; height: 100px; border: 3px double black;
+            overflow: scroll;
+            /* overflow;
+                레이아웃 박스 크기보다 컨텐츠 내용이 더 긴 경우에 
+                처리하는 법 */
+        }
+    </style>
+</head>
+<body>
+    <div id="target">
+        <p>BLOCK #01</p>
+        <p>BLOCK #02</p>
+        <p>BLOCK #03</p>
+        <p>BLOCK #04</p>
+        <p>BLOCK #05</p>
+    </div>
+</body>
+</html>

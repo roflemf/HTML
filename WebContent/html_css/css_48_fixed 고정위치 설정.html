@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width:200px; height: 100px;
+            background: lightgreen;
+        }
+        #two{
+            background: yellow;
+            position: fixed; /*고정위치 설정
+                                스크롤 내려도 같은 위치에 배치
+                                상담,쪽지 등과 같은 
+                                항상 같은 위치에 있어야 하는 창 만들때 쓰임 */
+            top:10px;
+            right:10px;
+            border: double 5px; 
+        }
+    </style>
+</head>
+<body>
+    <p>block #1</p>
+    <p id="two">
+        쪽지보내기<br>
+        position:fixed;
+        top:10px; right:10px;
+    </p>
+
+    <p>block #3</p>
+    <p>block #4</p>
+    <p>block #5</p>
+    <p>block #6</p>
+    <p>block #7</p>
+    <p>block #8</p>
+    <p>block #9</p>
+    <p>block #10</p>
+    <p>block #11</p>
+    <p>block #12</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            width:200px; height:50px; background-color: cyan;
+        }
+        #two{
+            position: static; 
+            /*정적위치 설정으로(순서대로)
+            문서가 정상적인 흐름에 따라 배치; 기본값*/
+            width: 200px; height: 50px;
+            background-color: yellow;
+        }
+        #three{
+            width:200px; height: 50px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>position:static 정적위치 설정 (기본값)</h2>
+    <div id="one">BLock #1</div>
+    <div id="two">
+        BLock #2<br>
+        position:static;<br>
+    </div>
+    <div id="three">
+        BLock #3<br>
+    </div>
+</body>
+</html>

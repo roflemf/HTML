@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*a: 의사클래스 ; 선택자에게 특별한 상태를 명시할 떄 */
+
+        a:link{ /*하이퍼링크 된 곳 css효과 */
+            color:red;
+        }
+        a:visited{/*하이퍼링크 된 곳; 한번이라도 방문한 곳(클릭한 곳) css 효과 */
+            color:orange
+
+        }
+        a:hover{/*하이퍼링크 된 곳; 마우스 오버시 css효과 */
+            color:blue; font: size 36px;
+        }
+        a:active{ /*하이퍼링크 된 곳; 클릭하는 순간 css 효과(현재형) */
+            color:yellow; font-weight: bolder; /*글자를 더 진하게 */
+            background-color: gray;
+
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <a href="#" target="_blank">여기가 링크입니다</a>
+        <!--하이퍼링크가 걸리면 밑줄선이 생기고, 마우스 오버시 화살표 마우스 포인터 -> 손가락으로 변경됌
+            target속성은 하이퍼링크 된 곳을 어디에 띄울 것인가를 지정
+            _blank는 새창에 띄운다. #의 뜻은 이동경로를 막았다는 의미
+            현재창에서 이벤트나 어떤ui효과 확인 용도-->
+
+
+    </p>
+</body>
+</html>

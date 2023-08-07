@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index속성 사용한 겹쳐보이는 요소의 우선순위 설정</title>
+    <style>
+        img{
+            position: absolute;
+            left:0px; top:0px;
+            z-index: -1;
+            opacity:0.5; /* 50% 불투명도 */
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="../images/dog.jpeg" width="200" height="180" alt="강아지">
+    <p>
+        img요소의 z-index값을 음수로 설정하면 글자뒤에 이미지가 배치
+    </p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기</title>
+    <style>
+         ul{
+            list-style: none; /*목록 앞 점 없앰 */
+            text-align: center; /*수평 중앙 정렬 */
+            border-top: 1px solid red; /*윗줄 선 두께를 1픽셀, 실선 solid, 선색 빨강 */
+            border-bottom: 1px solid red; /* 밑줄 선 */
+            padding: 10px 0px; /*상하 안 여백은 10픽셀, 좌우 안 여백은 0픽셀*/
+         }
+         ul li{
+            display: inline; /* ul li태그는 가로줄 전체를 차지하는 블록수준 요소 태그
+                                이것을 내용물 크기 만큼만 차지하는 인라인 요소태그로 변경
+                                그러므로 수직정렬이 수평정렬로 변경 */
+            text-transform: uppercase; /*영문 대문자로 변경 */
+            padding: 0px 20px; letter-spacing: 10px; /*글자간 간격 */
+         }
+         ul li a{
+            text-decoration: none; /* ul li의 하이퍼링크 된 곳 밑줄 선 사라짐 */
+         }
+         ul li a:hover{
+            text-decoration: underline; /* ul li의 하이퍼링크 된 곳 마우스 오버시 밑줄선 사라지게 */
+         }
+         h1{
+            text-align: center;
+         }
+    </style>
+</head> 
+<body>
+    <h1>웹 표준 접근성; </h1>
+    <h1>ul li태그는 메뉴 구성할 때 사용</h1>
+    <!-- 웹 표준 접근성; 어디서 접근하든 같은 ui로 나오게 하는 것 --> 
+     <ul>
+        <br>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <br>
+        <br>
+                
+     </ul>
+</body>
+</html>
