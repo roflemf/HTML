@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px; height: 50px;
+            background-color: yellow;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+
+        }
+        #box02{
+            transform: translate(100px, 0px); 
+            /* 왼쪽에서 오른쪽으로 100픽셀만큼 수평 이동 
+            (css3에서 추가됌)*/
+
+        }
+        #box03{
+            transform:scale(1.2,1.2);
+            /*x방향 1.2배, y방향 1.2배로 확대
+            (css3에서 추가)*/
+        }
+        #box04{
+            transform: rotate(30deg);
+            background-color: orange;
+            /*30도 회전 (css3)*/
+        }
+        #box05{
+            transform: skew(30deg,20deg);
+            /*30도(x축),20도(y축) 만큼 비틀기 전환 (css3)*/
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box01">Box01</div>
+    <div id="box02">Box02</div>
+    <div id="box03">Box03</div>
+    <div id="box04">Box04</div>
+    <div id="box05">Box05</div>
+</body>
+</html>

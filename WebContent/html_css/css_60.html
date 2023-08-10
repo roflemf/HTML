@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px; height: 100px;
+            background-color: red;
+            position: relative;
+            animation: 2s myanim; 
+            /*애니메이션 지속시간, 키프레임 이름 myanim 지정 */
+            animation-iteration-count: 10; 
+            /*10번반복 */
+
+        }
+        @keyframes myanim /* myanim 키프레임 이름 정의 */
+        {
+            0%{background: red; left:0px; top:0px;}
+            25%{background: red; left:100px; top:0px;}
+            50%{background: yellow; left:200px; top:0px}
+            70%{background: blue; left:100px; top:100px}
+            100%{background: blue; left:0px; top:0px}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
