@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var greet = function(){
+            alert("이름 없는 익명함수 (anonymous function)");
+        };
+        greet();
+
+        function show(){
+            name="var키워드로 변수 선언하지 않고 값을 바로 대입하면 전역변수로 사용된다.";
+            alert(name);
+        }
+        show();//함수호출
+        document.write(name);
+
+        function a(){
+            document.write("<hr>" + name);
+        }
+        a();
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>
