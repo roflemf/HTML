@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>for,while반복문 실습</h2>");
+
+        document.write("Hello World!<br>");
+        document.write("Hello World!<br>");
+        document.write("Hello World!<br>");
+        document.write("<hr>");
+
+        /*문제1
+         for 반복문을 사용해서 위와 같은 결과가 나오도록 해보기
+
+
+         문제2
+         while 반복문을 사용해서 다음과 같이 출력되게 만들기
+
+         출력예) 
+         카운터 : 0
+         ..중략
+         카운터 : 9
+        */
+
+        document.write("문제1)"+"<br>");
+
+        for(i=0 ;i<3;i++){
+            document.write("Hello World!<br>");
+        }
+        document.write("<br>");
+
+        document.write("문제2)"+"<br>");
+
+
+        var j=0;
+        while(j<=9){
+            document.write("카운터 : "+j+"<br>");
+            j++;
+        }
+        document.write("<hr>");
+
+        for(var a=1; a<=6; a++){
+            document.write("<h" + a+">Heading"+a+"</h"+a+">");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var x,y,input;
+
+    input= window.prompt("정수 숫자만 입력>>", "정수 숫자로");
+    //prompt()내장함수: 메시지를 가지고 입력박스가 있는 창을 띄움.
+    //확인 클릭시 입력필드에 입력한 값이 반환, 취소클릭시 null반환
+    alert(input);
+    if(input !=null){
+        x=parseInt(input);//parseInt()내장함수는 문자열을 정수 숫자로 변경한다.
+    }
+
+    input=prompt("정수 숫자만 입력>>","정수 숫자로");
+    alert(input);
+    if(input !=null){
+        y=parseInt(input);
+    }
+    document.write(x+" + "+y+" = " + (x+y) +"<hr>");
+
+    //입력박스에 입력시 ""가 붙기때문에 parseInt를 써야함
+</script>
+</body>
+</html>

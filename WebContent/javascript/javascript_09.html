@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //type속성을 생략해도 script 이후는 웹브라우저에서 기본언어로 자바스크립트로 인식
+
+        var a=3;
+        var b=4;
+        alert((a==3)&&(b==4));//참
+        alert((a==3)||(b==10));//참
+
+        var max_value = (a>b)?a:b;
+        document.write("두 수 중 최대값은 ? "+max_value+"<hr>");
+
+        var result =3+4*5;
+        /*문제) 자바스크립트에서 연산자 우선순위에서 result변수값은 얼마? (곱셈 우선)
+            답)23
+        */
+       document.write("result=" + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

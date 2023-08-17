@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var s="Hello Java";
+        var t="How are you" + " today?";//+는 문자열 연결 연산기호
+        
+        document.write("s=" +s+",t=" +t+"<hr>");
+
+        var myCar={model:"아우디",color:"red",hp:1000};
+        //기본 자료형을 제외한 객체형 myCar생성,
+        //그리고 속성명으로 model, color, hp를 정의
+
+        document.write(myCar.model+"," + myCar.color+"," + myCar.hp);//객체명.속성
+        document.write("자바스크립트 수학(산술) 연산자 종류<hr>");
+
+        var x=10;
+        var y=20;
+
+        document.write(x+" x " + (x*y)+"<hr>");//*는 곱셈연산
+        document.write(x+ " / " + (x/y) + "<hr>");//자바스크립트에서 정수 숫자를 나눗셈 하면 몫과 나머지를 함께 구함
+        document.write(x + " % " + " = " + (x%y));//%는 나머지 연산
+    </script>
+</body>
+</html>

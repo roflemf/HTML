@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){//function 키워드로 init()함수 정의
+            for(var i =0; i<=2; i++){
+                document.myform["a" + i].value=i;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        필드1: <input type="text" name="a0" size="6" ><br><br>
+        필드2: <input type="text" name="a1" size="6" ><br><br>
+        필드3: <input type="text" name="a2" size="6" ><br><br>
+        <input type="button" value="입력필드 초기화" onclick="init();" >
+    </form>
+</body>
+</html>

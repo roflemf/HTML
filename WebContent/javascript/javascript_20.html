@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    document.write("<h2>자바스크립트 배열 실습</h2>");
+    var fruits = ["apple", "banana", "grape"]; //배열원소값을 초기화하면서 fruits 배열 생성, 배열크기는 3
+    document.write("fruit배열크기 : " + fruits.length + "<hr>");
+    document.write("두번째 배열원소값 = " + fruits[1] + "<hr>");
+
+    var namesArray = new Array("홍길동" , "이순신");
+    for(var i= 0; i<namesArray.length;i++){
+        document.write(namesArray[i]+"<br>");
+    }
+    document.write("<hr>");
+
+    var compArray = new Array();
+    compArray[0] = "노트북"; //문자열값 저장
+    compArray[1] = new Date();//날짜 객체 저장
+    compArray[2] = 100;//정수값 저장
+    compArray[3] = 100.9;//실수값 저장 -> 자바스크립트 배열은 다른언어와 다르게 여러개 자료형 타입 동시 저장 가능하다.
+
+    for(var i = 0; i<compArray.length; i++){
+        document.write(compArray[i] + "<br>");
+    }
+    document.write("<hr>");
+
+    var fruitArray= new Array();
+    fruitArray['a'] = "사과"; //a키 이름에 사과값 저장 -> 키,값 쌍 구조인 사전적 자료구조 배열 초기화
+    fruitArray['b'] = "복숭아";
+
+
+    document.write(fruitArray["a"] + "<br>");
+    document.write(fruitArray["b"] + "<hr>"); //배열주소 인덱스 번호가 아닌 키를 통해서 값을 가져옴
+
+
+ 
+</script>
+    
+</body>
+</html>

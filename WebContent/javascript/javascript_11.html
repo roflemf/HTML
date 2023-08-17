@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+            var x=document.getElementById("a").value;
+            var y=document.getElementById('b').value;
+            var sum=parseInt(x) + parseInt(y);
+
+            document.getElementById("total").value=sum;
+        }
+    </script>
+</head>
+<body>
+    <h2>덧셈 계산기</h2>
+    <form>
+        첫번째 정수 : <input type="text" id="a" size="10" ><br><br>
+        두번째 정수 : <input type="test" id="b" size="10" ><br><br>
+        합계 : <input type="text" id="total" size="14" ><hr>
+        <input type="button" value="계산" onclick="calc();" >
+        <!-- onclick은 사건처리기 즉 클릭이라는 이벤트 처리하는 이벤트 핸들러인 사건처리기.
+        클릭 이벤트 처리를 calc()함수명을 호출-->
+    
+    </form>
+</body>
+</html>

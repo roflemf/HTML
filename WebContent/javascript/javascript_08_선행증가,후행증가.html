@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x=10,y=0;
+        y=x++; //먼저x변수값 10을 y변수에 저장한 다음 나중에 1증가 ->후행증가
+        document.write("x=" +x+",y=" + y+"<hr>"); //11,10
+
+        x=10;
+        y=++x;//선행증가 ->먼저 1증가한 11을 y변수에 저장
+        document.write("x=" +x+",y=" +y+"<hr>");//11,11
+
+        var a=10+10;//숫자+숫자는 덧셈을 한다.
+        document.write("a=" +a+"<hr>");//20
+        var result="Water" + 10;//문자+숫자에서 문자를 우선해서 숫자 10이 문자로 치환되어져서 서로 연결(+)
+        document.write(result+"<hr>");
+
+        var b=10,c=20;
+
+        document.write(b+ " == " +c+ " : " +(b==c)+"<hr>");
+        //== 같다 비교연산 =>false
+        document.write(b+" != "+c+" : " +(b!=c)+"<hr>");//!== 같지않다 비교연산 =>true
+    </script>
+</body>
+</html>

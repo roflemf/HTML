@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showDialog(){
+            alert('안녕하세요!');
+        }
+
+        function greeting(name,pos){
+            alert(name + " " + pos+"님을 환영합니다.");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <button onclick="showDialog();">대화상자 오픈</button>
+        <input type="button" value="눌러보세요" onclick="greeting('홍길동','부장');" >
+    </form>
+</body>
+</html>
