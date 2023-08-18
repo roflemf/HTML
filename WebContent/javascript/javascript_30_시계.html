@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var result; //전역변수(프로그램 전체 영향 끼침)
+
+        function st(){
+            t = new Date(); //날짜 객체 생성
+            y = t.getFullYear();//년도값 반환
+            m = t.getMonth() +1; //월값 , +1; 1월이 0으로 반환되기 떄문
+            d = t.getDate(); //일
+            h = t.getHours(); //시간
+            mm = t.getMinutes(); //분
+            s = t.getSeconds(); //초
+
+            document.getElementById('clock').value = y+"년" + m +"월" + d+"일" + h+"시"+ mm+'분' + s + '초'+"입니다";
+            
+            result = window.setTimeout('st()' , 1000);
+            //1000은 밀리세컨드 단위, 1초 간격으로 매번 st()함수를 호출해 동작하는 시간값을 만듬
+        }
+
+        function stop(){
+            window.clearTimeout(result); //동작하는 시간값을 해제(멈춤)
+        }
+    </script>
+</head>
+<body>
+    <h2>시계동작</h2>
+    <button type = "button" onclick="st();">시계동작</button>
+    <input type = "button" value="시계 멈춤" onclick="stop();" >
+    <hr>
+    동작하는 시계 : <input type= "text" id= "clock"  size = "50">
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> </title>
+</head>
+<body>
+ <h2>prompt()함수에 관한 실습 예제</h2>
+ <script>
+ /*문제)prompt()내장함수(메서드)를 활용하여 1~100이하 정수 숫자만 입력받게 해서,입력받은 정수 문자를 parse
+ Int()내장함수로 정수 숫자로 변경한 다음, if else문을 사용하여 입력받은 정수숫자가 1~100사이 정수값이 아닌경우,
+ '1~100사이 정수값만 입력하세요!'라고 경고 메시지를 띄우고, 1~100사이 정수값을 입력한 경우 for반복문을 사용해서
+ 누적합을 구한 다음 alert()내장함수로 누적합을 띄우는 프로그램을 작성해 보자.
+ */
+ var number = window.prompt("1~100이하 정수 숫자만 입력하세요",'');
+ number = parseInt(number);
+ 
+ if(!(1 <= number && number <= 100)){
+    alert('1~100사이 정수숫자값만 입력하세요!');
+ }else if(number>=1 && number <= 100){
+    var total=0; //누적합
+    for(var i=1; i<=number; i++){
+       total += i;
+    }
+    alert(total);
+ }
+ </script>
+</body>
+</html>

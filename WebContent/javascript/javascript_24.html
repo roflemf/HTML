@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>return키워드 기능과 전역변수, 지역변수</h2>");
+
+        function devide(a,b){
+            if(b==0){
+                return; //함수 종료
+            }
+            return a/b; //나눈값을 반환
+        }
+        var result = devide(9,0);
+        document.write("result="+result+"<hr>");
+
+        var sum=0; //전역변수
+        function add(a,b){
+            sum=a+b;
+            return sum; //덧셈한 결과값 반환
+        }
+        var result=add(10,25);
+        document.write("10+25"+result+"<hr>");
+
+        function add2(a,b){
+            var total = a+b;//total은 지역변수
+            total2=a+b;//전역변수
+        }
+        add2(10,10);
+
+        //alert(total);//지역변수라서 에러남
+        alert(total2);
+    </script>
+</body>
+</html>

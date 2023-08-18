@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 문제) 
+        max함수를 정의해서 인자값 두 수 중에서 더 큰수를 구하는 자바스크립트 프로그램 완성 */
+
+        function max(a, b){
+            //logic
+            if(a> b){
+                return a;
+            }else{
+                return b;
+            }           
+        }
+
+        
+    </script>
+</head>
+<body>
+    <h2>window객체 하위의 prompt() 메서드(내장함수) 실습</h2>
+    <script>
+        var a= window.prompt("정수 숫자값만 입력", ''); //window.생략가능
+        var b= prompt('두번째 정수 숫자만 입력', ''); //prompt()는 입력필드와 메세지를 가진 창을 만들고 
+        //확인 클릭시 입력필드값 반환, 취소 클릭시 null반환
+
+        var result = max(a,b);
+        document.write(a+" 와 " + b + " 중에서 더 큰 수 ? " +"<br>"+ result + "<hr>");
+    </script>
+</body>
+</html>

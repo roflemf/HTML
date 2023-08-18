@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h2>Array배열 내장객체 하위 메서드</h2>")
+
+        var x = [10,20,30];
+        var y = [40,50,60];
+        var joined = x.concat(y); //x배열원소값 끝에 y배열 원소값 추가
+
+        document.write(x+"<hr>");//10,20,30
+        document.write(joined + "<hr>"); //10,20,30,40,50,60
+
+        var cityNames = ["Seoul" + "Busan" + "Incheon"];
+        document.write(cityNames.indexOf('Seoul')); //Seoul 배열원소값의 주소 인덱스 번호 반환 배열주소 인덱스 번호는 0 부터 시작
+        document.write("<hr>");
+
+        var numbers = [1,2,3,4,5];
+        numbers.push(6);//배열 원소값 끝에 6추가
+        document.write(numbers+"<hr>"); //1,2,3,4,5,6
+
+        item = numbers.pop(); //pop() : 배열원소 마지막값 제거하면서 반환
+        document.write("pop한 item : " + item + "<hr>")//6
+        document.write(numbers + "<hr>");//1,2,3,4,5
+
+        
+        item = numbers.shift(); //첫번째 배열원소값 제거하면서 반환2,3,4,5
+        document.write("shift한 item: " + item + "<hr>");//1
+        document.write(numbers+"<hr>");//2,3,4,5
+
+        var arr = [1,2,3,4,5,6,7,8,9,10];
+        var newArray = arr.slice(5); //배열주소 인덱스 번호 5이후부터 마지막 배열원소값까지 반환
+        document.write("slice한 arr : " +newArray+"<hr>");//6,7,8,9,10
+
+        var namesArray = ["홍길동", "이순신", "강감찬"];
+        var resultArr = namesArray.join("+"); //배열원소값 + 로 연결
+        document.write(resultArr);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

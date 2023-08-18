@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum=0;
+        function num(a){
+            if(a>=1 && a<=100){
+                for(i=1;i<=a;i++){
+                    sum +=i;
+                }
+                alert("1부터 " + a +  "까지의 합: " + sum);
+            }else{
+                return -1;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>prompt()함수에 관한 실습예제</h2>
+    <script>
+        /*문제)
+        promt() 내장함수(메서드)를 활용해 
+        1~100이하 정수 숫자만 입력받게 해, 입력받은 정수숫자가 1~100이 아닌 경우, 
+        '1~100사이 정수값만 입력하세요!' 경고메세지를 띄우고, 
+        1~100사이 정수값을 입력한 경우 for반복문을 사용해 누적합을 구한 후 
+        alert()내장 함수로 누적합을 띄우는 프로그램 제작 
+        */
+
+        var a = parseInt(prompt("1~100이하 정수 숫자를 입력하세요"));
+        var sumResult = 0;
+        sumResult = num(a);
+        //-1이 리턴되면 다시입력하세요 
+        if(sumResult == -1){
+            document.write("1~100이하 정수숫자만 입력")
+        }
+       
+    </script>
+</body>
+</html>
