@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dd(form){
+            var countRadio = form.color.length; //라디오 객체수 4
+            for(var i = 0;i< countRadio; i++){
+                //첫번쨰 radio가 0부터 시작
+                if(form.color[i].checked == true){
+                    //==checked생략 가능
+                    document.bgColor=form.color[i].value; //bgColor속성으로 본문 배경색을 변경
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>라디오 버튼 실습</h2>
+    <h3>가장 좋아하는 색은?</h3>
+<form>
+    <input type="radio" name="color" value="#FF9" onclick="dd(this.form);" >연노랑
+    <input type="radio" name="color" value="#FFCCFF" onclick="dd(this.form);">분홍색
+    <input type="radio" name="color" value="orange" onclick="dd(this.form);">오렌지
+    <input type="radio" name="color" value="#00ff33" onclick="dd(this.form);">연두색
+</form>
+</body>
+</html>

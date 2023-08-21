@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "p01">This is a paragraph</p>
+    <script>
+        function changeStyle(){
+        document.getElementById('p01').style.color='red'; //p01영역 글자색을 빨강으로 처리
+        document.getElementById('p01').style.fontFamily='궁서체';
+        document.getElementById('p01').style.fontStyle='italic'; //글꼴스타일이 기울임으로 변경
+
+        }
+    </script>
+    <form>
+        <input type="button" value="클릭" onclick="changeStyle();" >
+    </form>
+</body>
+</html>

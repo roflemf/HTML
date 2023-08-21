@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function open_win(){
+            window.open("event.html","이벤트 창","width=350px,height=420px,scrollbars=yes");
+            /* winow 객체 하위의 open()메서드로 새로운 공지창을 만든다. open(공지창 경로, 공지창 이름, 공지창 속성)
+            폭이 350px,높이 420px,스크롤바가 생성되는 새로운 공지창을 만듬
+            */
+        }
+    </script>
+</head>
+<body onload="open_win();">
+<!--onLoad이벤트는 웹페이지 시작과 동시에 발생-->
+    <h1>공지창 띄우기</h1>
+
+    
+</body>
+</html>

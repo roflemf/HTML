@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(f){//f 는 form태그를 가리킴
+            if(f.a.checked == true){//==true생략함
+                alert(f.a.value);
+            }
+
+            if(f.b.checked){//==true가 생략됌
+                alert(f.b.value);
+            }
+
+            if(f.c.checked){
+                alert(f.c.value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>checkbox예제</h3>
+    <form>
+        <dl>
+            <dt>사용할 드라이브 선택</dt>
+            <dd><input type="checkbox" name="a"  value="A 드라이브" >a 드라이브</dd>
+            <dd><input type="checkbox" name ="b" value="B 드라이브" >b 드라이브</dd>    
+            <dd><input type="checkbox" name ="c" value="C 드라이브" >c 드라이브</dd>
+        </dl>
+
+        <input type="button" value="확인" onclick="check(this.form);">
+</form>
+</body>
+</html>

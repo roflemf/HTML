@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        새창으로 열기 코드
+        function url(){
+        window.open(location.href='http://www.naver.com', "_blank");}
+        */
+
+    function url(){
+        location.href='http://www.naver.com'
+    }
+
+    function url2(link){
+        location=link;
+    }
+
+    </script>
+</head>
+<body>
+    <h2>자바스크립트 location 객체로 원하는 주소로 이동하기 </h2>
+    <form>
+        <input type="button" value="구글로 이동"
+        onclick="window.location.href='http://www.google.co.kr';">
+        <!--window. & .href속성은 생략가능, location객체로 원하는 주소로 이동-->
+
+        <input type="button" value="네이버로 이동" onclick="url()"; >
+        <input type="button" value="한메일로 이동" onclick="url2('http://www.daum.net')">
+    </form>
+</body>
+</html>

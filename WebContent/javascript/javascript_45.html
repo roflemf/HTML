@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onMousein(elem){
+            elem.style.border="2px solid red"; //테두리 선두꼐를 2픽셀, solid실선, 테두리 선색을 빨강
+        }
+        function onMouseOut(elem){
+            elem.style.border='';//테두리 선 없애기
+        }
+    </script>
+</head>
+<body>
+    <div style="background-color: yellow; width: 200px; height: 100px;"
+    onmouseover="onMousein(this);" onmouseout="onMouseOut(this);" >
+    <!--mouseover 이벤트(사건,일)는 어떤 요소 위에 마우스를 올려 놓았을 때 발생,
+        mouseout 이벤트 어떤요소를 떠났을때 발생, this는 div를 가리킴, elem도 div를 가리킴-->
+    마우스를 이 div요소 위로 이동하면 테두리가 만들어짐.
+
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가장 좋아하는 스포츠는?</title>
+    <script>
+        function check(f){
+            var count = f.s.length; //라디오 객체 수 = 4
+            for(var i=0; i<count; i++){
+                if(f.s[i].checked){
+                    //==true생략
+                    alert(f.s[i].value+"를 좋아한다.");
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="radio" name="s" value="축구">축구
+        <input type="radio" name="s" value="야구">야구
+        <input type="radio" name="s" value="골프">골프
+        <input type="radio" name="s" value="배구">배구
+        <hr>
+        <input type="button" value="확인" onclick="check(this.form);">
+        <input type="reset" value="취소">
+    </form>
+    
+</body>
+</html>

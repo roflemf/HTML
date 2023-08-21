@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkNotEmpty(field){
+            if(field.value.length ==0){
+                alert("이름을 입력하세요");
+                field.focus();//아무것도 입력 안했을시 ;이름 입력박스로 포커스 이동
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>유효성 검증(validate) 예제</h1>
+    <form>
+        이름: <input type="text" id="name" size="16">
+        <input type="button" value="확인" onclick="checkNotEmpty(document.getElementById('name'))">
+
+    </form>
+</body>
+</html>

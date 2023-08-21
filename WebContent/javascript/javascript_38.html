@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function get(){
+            var data = document.getElementById('ex').innerHTML;//ex아이디 영역의 문자와 태그를 함께 가져옴
+            alert(data);
+        }
+
+        function set(v){
+            document.getElementById('ex').innerHTML=v;//ex아이디 영역의 문자와 태그를 함께 변경 적용
+        }
+    </script>
+
+</head>
+<body>
+    <div id = "ex">여기가<strong>div로 선언</strong>되었습니다.</div>
+    <a href="#" onclick = "get();">div 요소 내용 출력하기</a>
+    <a href="#" onclick="set('<h1>변경되었습니다.</h1>')">div 요소 내용 변경하기</a>
+</body>
+</html>
