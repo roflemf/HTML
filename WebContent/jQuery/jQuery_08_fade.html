@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#fadeIn').click(function(){
+                $('#cat').fadeIn('slow'); //jQuery fadeIn(); 해당요소 표시
+            });
+
+            $('#fadeOut').click(function(){
+                $('#cat').fadeOut('slow'); //jQuery fadeOut(); 해당요소 사라지게
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <button type="button" id="fadeIn">fadeIn</button>
+    <button type="button" id="fadeOut">fadeOut</button>
+    <!--button태그 type속성 생략하면 기본값은 submit이다.-->
+    <hr>
+    <img id="cat" src="../images/cat.jpg" width="150" height="130" style="display: none; position: relative;">
+</body>
+</html>

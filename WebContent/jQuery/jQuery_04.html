@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: #EEF;
+        }
+        div{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        $(document).mousemove(function(e){//마우스를 움직였을 때 이벤트 정보가 e로 전달됌.
+            $('#log').text("x좌표 : " + e.pageX + ", y좌표: " + e.pageY); //마우스를 움직였을 때 x,y 좌표값이 text() jQuery함수에 의해 해당 문자가 변경 적용됌.
+            
+        });
+    </script>
+</body>
+</html>

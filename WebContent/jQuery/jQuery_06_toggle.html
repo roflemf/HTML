@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" value="show Cat" id="cat" >
+    <hr>
+    <img id="cat_image" src="../images/cat.jpg" width="200" height="150" alt="고양이" style="display: none;">
+    <script>
+        $(document).ready(function(){
+            $('#cat').click(function(){//id선택자 cat인 버튼 클릭 이벤트가 발생하면 실행
+                $('#cat_image').toggle(); //jQuery toggle(); 해당영역이 숨겨져있으면 보이고, 보여지고 있으면 숨기게 함
+            })
+        });
+    </script>
+    
+</body>
+</html>

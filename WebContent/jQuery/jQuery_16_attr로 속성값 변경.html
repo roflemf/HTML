@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#attr_btn').click(function(){
+                $('#dog').attr('alt', 'Best 강아지'); //alt속성값 변경
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>attr()함수로 속성값 변경하기</h2>
+    <img src="../images/dog2.jpeg" id="dog" width="150" height="120" alt="강아지">
+    <!--이미지 경로 파일명을 틀리게 해서 alt속성 문자값이 브라우저로 출력되어야 함-->
+    <hr>
+    <button type="button" id="attr_btn">attr()함수로 속성값 변경</button>
+</body>
+</html>

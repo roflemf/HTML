@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slideDown').click(function(){
+                $('#dog').slideDown('slow'); //jQuery slideDown(); 해당요소를 밀어내린다. 
+            });
+
+            $('#slideUp').click(function(){
+                $('#dog').slideUp("slow"); //jQuery slideUp(); 해당요소를 천천히 밀어올린다.
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="slideDown" value="slideDown()" >
+    <input type="button" id="slideUp" value="slideUp()" >
+    <hr>
+    <img src="../images/dog.jpeg" width="150" height="126" id="dog" style="display: none; position: relative;">
+    <!--display: none; 해당요소 보이지 않게-->
+</body>
+</html>

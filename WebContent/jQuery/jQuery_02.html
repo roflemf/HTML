@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <!--로컬 컴에 저장된 jQuery 라이브러리 읽어오기-->
+    <style>
+        div.out{
+            width: 230px; height: 150px; background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>mouseover이벤트와 jQuery text()함수 실습</h2>
+    <div class="out">
+        <p>마우스를 여기로 움직이세요</p>
+        <p>0</p>
+    </div>
+    <script>
+        $i =0; //$i는 jQuery 변수명
+        $('div.out').mouseover(function(){//div.out 영역 위에 마우스를 올려 놓았을때 실행
+            $("p:first", this).text("mouse over"); //p:first 는 p태그 첫번쨰 요소에 마우스 오버하면 문자를 mouse over로 변경. text()함수는 해당요소에 문자를 변경한다.
+            $("p:last",this).text(++$i);//p:last는 p태그 마지막 요소 자기자신(this)에게 선행 증가한 숫자값을 변경수정
+            $("p:last",this).toggle();
+        });
+    </script>
+</body>
+</html>

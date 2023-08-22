@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#text').click(function(){
+                $('#target').text('변경합니다.'); //text()함수에 인자값이 있으면 해당 영역의 문자를 변경
+            });
+            $('#html').click(function(){
+                $('#target').html('<b>안녕하세요!</b>')//html함수의 인자값이 있으면 해당요소에 문자와 태그를 함께 변경 적용
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="target">여기에 변경 적용</p>
+    <button type="button" id="text">text()</button>
+    <button type="button" id="html">html()</button>
+</body>
+</html>

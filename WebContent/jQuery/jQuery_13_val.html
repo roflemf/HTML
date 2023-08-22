@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>val함수를 이용한 입력내용 경고창 띄우기</title>
+    <!--val : 입력박스의 입력값을 반환하거나 변경-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn_name').click(function(){
+                alert($('#name').val());//jQuery val()함수에 인자값이 없으면 해당 입력필드의 입력값을 가져온다.
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        이름: <input type="text" id="name" size="14"><br><br>
+        <button id="btn_name" type="button" >val()</button>
+    </form>
+</body>
+</html>

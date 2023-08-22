@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#id').focus(function(){//id 선택자 영역에 포커스를 가졌을 때 발생
+                $('#id').css("background-color","yellow");
+                //id선택자 요소의 배경색을 css()함수로 노랑으로 변경
+
+            });
+
+            $('#id').blur(function(){ //id선택자 입력필드에 포커스를 잃어버렸을 때 발생
+                $(this).css("background", "white");//배경색을 흰색으로 변경
+            });
+        })
+    </script>
+</head>
+<body>
+    <form>
+        아이디 : <input type="text" id="id" size="16" >
+    </form>
+</body>
+</html>

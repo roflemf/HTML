@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        $(document).ready(function(){
+            $('#name_btn').click(function(){
+                $('#name').val('이름을 입력하세요!'); //val()함수에 인자값이 있으면 해당 인자값을 입력필드에 ''안의 내용으로 변경 적용
+
+            });
+        });
+    </script>
+</head>
+<body>
+     <form>
+        이름 : <input type="text" id="name" size="18" >
+        <input type="button" value="val()" id="name_btn" >
+     </form>
+    
+</body>
+</html>

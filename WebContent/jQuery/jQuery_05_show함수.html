@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button type="button">Show Image</button><hr>
+    <img id = "dog" src = "../images/dog.jpeg" width="120" height="100" style="display: none;" >
+    <!--css에서 display:none;은 해당요소를 안보이게 하고, 자리도 차지하지 않는다. -->
+
+    <script>
+        $(document).ready(function(){
+                $("button").click(function(){
+                    $('#dog').show("slow"); //jQuery show()함수로 해당요소를 천천히 보이게 함
+
+            });
+        })
+    </script>
+</body>
+</html>
