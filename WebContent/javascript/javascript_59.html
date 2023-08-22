@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function event_check(){
+            if(document.getElementById('title').value==""){
+                alert('글제목을 입력하세요!');
+                document.getElementById('title').focus();
+                return false;
+            }
+
+            if(document.getElementById('cont').value.length == 0){
+                alert('글 내용을 입력하세요!');
+                document.getElementById('cont').focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>유일 아이디 선택자와 submit 이벤트 사용한 유효성 검증</h2>
+    <form method = "post" action="#" onsubmit="return event_check();">
+    제목  :  <input type="text" id = "title" size="36" ><br><br>
+    글 내용:  <textarea id = "cont" rows="10" cols="36"></textarea>
+                                    //행       열
+        <hr>
+        <input type="image" src="../images/dog.jpeg" width="30" height="20" >
+        <!--image는 이미지 삽입과 데이터를 서버로 보내는 효과-->
+        <input type="reset" value="취소" onclick="document.getElementById('title').focus();" >
+    </form>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(f){
+            var n=f.job.length; //select 객체수를 반환
+
+            for(var i=0; i<n; i++) {
+                if(f.job.options[i].selected == true){
+                    //selected 속성을 사용해서 해당목록이 선택되었다면 true
+                    alert(f.job.options[i].text+"이 선택됌.");
+                    //text 속성은 브라우저에 출력되는 목록항목 문자를 가져옴
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h2>select 실습</h2>
+    <form>        
+        <select name = "job" size="3" multiple>
+            <!-- size="3"은 브라우저 화면에 보이는 목록 개수, multiple속성은 여러개 항목을 동시에 선택 가능-->
+            <option>자바 개발자</option>
+            <option>데이터베이스 개발자</option>
+            <option>운동선수</option>
+            <option>회사원</option>
+        </select>
+    <hr>
+
+    <input type="button" value="확인" onclick="check(this.form);" >
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            if(window.document.f.name.value == ''){
+                //window.document.은 생략가능
+                window.alert("글쓴이를 입력하세요!"); //window.은 생략가능
+                f.name.focus();
+                return false;
+            }
+            
+            if(f.title.value.length == 0){
+                alert('글제목을 입력하세요!');
+                f.title.focus();
+                return false;
+
+            }
+            f.submit(); //f는 form태그를 네임 파라미터 이름, form객체 하위의 sumbmit()메서드는 입력한 자료를 서버로 전송
+        }
+    </script>
+</head>
+<body>
+    <h2>네임 파라미터 이름을 사용한 유효성 검증</h2>
+    <form name = "f" method="post" action="#">
+        글쓴이 : <input type="text" name = "name" size="14">
+        <br><br>
+        글제목 : <input type="text" name = "title" size = "36" ><hr>
+        <input type="button" value="저장" onclick="check();" >
+        <input type="reset" value="취소" >
+
+    </form>
+    
+</body>
+</html>

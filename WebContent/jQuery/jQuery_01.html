@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첫번째 jQuery 파일</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--CDN(Content Delivery Network)은 원격으로 인터넷 연결된 상태에서 jQuery(자바스크립트 프레임웍) 라이브러리를 사용하는 것을 말함-->
+    <script type="text/javascript">
+        $(document).ready(function(){//문서가 준비되었으면 jQuery함수를 사용하겠다는 의미
+            //$; jQuery Q;영문대문자
+            jQuery("h2").click(function(){//jQuery대신 $사용 가능.
+            //h2태그 요소에 클릭 이벤트 발생시 실행
+            $(this).hide(); //this는 현재 요소 즉 h2태그 가리킴. jQuery hide()함수는 선택된 요소를 숨김
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>여기 클릭시 사라짐</h2>
+</body>
+</html>
