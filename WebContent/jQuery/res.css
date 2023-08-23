@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#page{
+	width: 960px; padding: 5px; margin: 20px auto; 
+
+}
+#header{
+	height:50px;
+}
+#main{
+	width: 600px; float:left; /*왼쪽에 배치*/
+}
+#sidebar{
+    width: 300px; float: right; /*수평 오른쪽으로 배치 */
+}
+#footer{
+    clear:both; 
+    /*float속성(옆으로 나열) 제거해 footer영역이 위쪽의 빈공백으로 올라가서 
+    수평으로 배치되는 현상이 발생하여 ui가 깨지는 것을 막아줌 */
+    
+}
+
+@media screen and (max-width:980px){/* 미디어 타입이 스크린(일반화면,인쇄화면X)이고 최대너비가 980px이면 */
+    #page{
+        width: 94%;
+    }
+    #main{
+        width: 64%;
+    }
+    #sidebar{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width:700px){
+    #main{
+        float:none; /*float속성을 제거하여 레이아웃을 수평 -> 수직으로 배치 */
+        width: auto;
+    }
+    #sidebar{
+        float: none;
+        width: auto;
+
+    }
+}
+
+#header,#main,#sidebar,#footer{border:1px solid red;}
+#header{background-color: yellow;}
+#sidebar{background-color: aliceblue;}
+#main{background-color: aqua;}
+#footer{background-color: coral;}

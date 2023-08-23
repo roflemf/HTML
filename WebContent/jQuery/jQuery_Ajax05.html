@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#submit').click(function(){
+                $username = $('.name').val();//입력필드 이름 입력값 가져옴
+                $sendData = "name2=" +$username; //name2 네임 파라미터 이름에 입력한 이름을 담아 전달
+                $.post(
+                    'result.jsp', //서버파일 경로
+                    $sendData, //보낼 자료
+                    function(data){//비동기식 아작스로 받아오는 것이 성공시 호출, 
+                    //받아온 자료는 data매개변수에 저장
+                    $('#message').html(data); 
+                    //message아이디 영역에 html()함수로 받아온 자료의 태그와 문자를 함께 변경 적용
+
+                    }
+                ); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>비동기식 $.post()함수 사용 예</h2>
+    <form>
+        <label>이름 입력 :</label>
+        <input type="text" class="name" size="14"><br><br>
+        <input type="button" id="submit" value="전송">
+    </form>
+
+    <hr>
+    <div id="message"></div><!--이 영역에 비동기식 아작스로 받아온 자료 출력-->
+</body>
+</html>

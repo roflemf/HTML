@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn01').click(function(){
+                $('#div01').addClass("warn"); //warn클래스 선택지에 정의된 css를 한꺼번에 적용
+            });
+        });
+    </script>
+    <style>
+        .warn{
+            background-color: orange; border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>jquery addClass()함수 실습</h2>
+    <div id="div01">
+        <p>이 영역에 warn클래스 선택자로 지정된 css가 한꺼번에 적용</p>
+    </div>
+    <hr>
+    <button type="button" id="btn01">addCalss()</button>
+</body>
+</html>

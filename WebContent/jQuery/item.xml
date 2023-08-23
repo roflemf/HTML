@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+ <item id="2" name="메론">
+  <price>8000</price>
+  <des>메론에는 비타민 A와 칼륨이 많이포함되어있다. </des>
+  </item>
+
+  <item id="3" name="수박">
+  <price>18000</price>
+  <des>수박에 수분이 많다.</des>
+  </item>
+</items>

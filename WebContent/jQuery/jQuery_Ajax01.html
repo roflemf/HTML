@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div{
+            width: 180px; height: 100px; margin:3px; float: left;
+            /*복수개의 div 레이아웃 수직정렬을 수평으로 배치 */
+        }
+    </style>
+    <script>
+        $(function(){
+            $('#menu01').click(function(){
+                $('#result01').load('menu.html'); //비동기식 jQuery ajax load()함수로 menu.html을 화면전환 없이 현재화면에서 읽어온다.
+                return false;
+            });
+            $('#menu02').click(function(){
+                $('#result02').load("menu.html li"); //비동기식으로 li태그요소만 읽어옴
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+    <a href="#" id="menu01">메뉴 01</a><p>
+    <span id="result01"></span><!--이 영역에 비동기식으로 가져온 내용이 출력된다.-->
+    </div>
+
+    <div>
+        <a href="#" id="menu02">메뉴02</a>
+        <span id="result02"></span>
+    </div>
+</body>
+</html>

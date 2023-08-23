@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table,th{
+            border: 2px solid gray;
+        }
+    </style>
+    <script>
+        $(function(){
+            $.get('item.xml',function(data){//비동기식 get으로 읽어온 xml데이터는 data매개변수에 저장
+                $('#result').append(
+                    "<tr><th>id</th><th>name</th><th>price</th><th>des</th></tr>"
+                )
+
+                $(data).find('item').each(function(){//메서드 체이닝 방법으로 data매개변수로부터 item태그를 찾아서 each()함수로 item태그 단위로 반복시킴
+                    $item=$(this); //item태그를 가리킨다
+                    $('#result').append(
+                        "<tr><th>"+$item.attr("id")+
+                        "</th><th>"+$item.attr("name")+"</th><th>"+$item.find('price').text()+
+                        "</th><th>"+$item.find('des').text()+"</th></tr>"); //attr("id"); id속성값 반환
+                    //$item.find('des'); des태그를 찾는다
+                    //text(); 해당영역의 문자를 반환
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>xml 파일을 비동기식 get방식으로 로드 실행</h2>
+    <table id="result"></table>
+</body>
+</html>

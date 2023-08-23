@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table,th{
+            border: 3px solid red;
+        }
+    </style>
+    <script>
+        $(function(){
+            $.getJSON('item.json',function(data, textStatus){
+                //비동기식 get으로 가져온 JSON 데이터는 data 매개변수에 저장됌. textStatus 에는 'success'문자가 저장
+                alert(textStatus);
+
+                $('#result').append(//append()함수로 기존 내용을 유지한 채 끝에 추가
+                "<tr><th>id</th> <th>과일이름</th> <th>과일가격</th> <th>설명</th></tr>"
+                );
+
+                $.each(data,function(){//$.each()함수로 tr행단위로 반복
+                    $('#result').append(
+                        "<tr><th>"+ this.id+"</th><th>"+this.name+"</th><th>"+this.price+"</th><th>"+this.description+"</th></tr>"
+
+
+                    );
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery 비동기식 $.getJSON()함수</h2>
+    <table id="result"></table> <!--json data 이 영역에서 출력-->
+</body>
+</html>

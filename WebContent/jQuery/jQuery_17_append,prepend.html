@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn01').click(function(){
+                $('#re').append("<b style='color:red; '> End </b>"); //jQuery append()함수는 선택된 요소 끝에 추가
+            });
+
+            $('#btn02').click(function(){
+                $('#re').prepend("<b style='color:orange;' > First </b>")//prepend()함수는 선택된 요소 처음에 내용을 추가
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="re">You would like to say:</p>
+    <button type="button" id="btn01">append()</button>
+    <input type="button" value="prepend()" id="btn02">
+</body>
+</html>

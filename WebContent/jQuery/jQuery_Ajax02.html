@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px; height: 250px; margin:5px; float: left;
+            border: 3px double violet;
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('#menu01').click(function(){
+                $.ajax({
+                    url:"menu.html",//아작스 서버파일 주소
+                    dataType: 'html',//비동기식으로 받아오는 자료형식
+                    success:function($data){
+                        //비동기식 받아오는 자료 성공시 호출되는 콜백함수, 받아온 자료는 data 매개변수에 저장
+                        $('#re01').html($data);//re01영역에 받아온 자료를 태그와 문자로 함께 변경적용
+                    }
+                });
+                return false;
+            });
+            $('#menu02').click(function(){
+                $.ajax({
+                    url: "menu.html",
+                    dataType: 'html',
+                    success: function(data){
+                        $('#re02').html($(data).find('li')); //data매개변수 값에서 find() jQuery함수로 li태그 요소만 찾아서 태그와 문자를 함께 변경 적용
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery 비동기식 ajax()함수(가장 많이 사용함)</h2>
+    <div>
+        <a href="#" id="menu01">메뉴 보기01</a>
+        <span id="re01"></span>
+    </div>
+
+    <div>
+        <a href="#" id="menu02">메뉴 보기02</a>
+        <span id="re02"></span>
+    </div>
+</body>
+</html>
